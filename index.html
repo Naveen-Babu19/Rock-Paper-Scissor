@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="style.css" rel="stylesheet" type="text/css">
+        <title>Js Assignment 013</title>
+    </head>
+    <body>
+        <section class="nextGame">
+            <button class="gameChange brdRight" onclick="threegame()">RPS</button>
+            <button class="gameChange" onclick="fivegame()">RPSSL</button>
+        </section>
+        <header>
+            <div class="scoreCard">
+                <h2 class="score">Our Score</h2>
+                <p id="scoreNum" class="scoreNum">0</p>
+            </div>
+            <ul>
+                <li>ROCK</li>
+                <li>PAPER</li>
+                <li>SCISSOR</li>
+                <li class="none" id="spockLet">SPOCK</li>
+                <li class="none" id="lizardLet">LIZARD</li>
+            </ul>
+            <div class="scoreCard">
+                <h2 class="score">Bot Score</h2>
+                <p id="botScoreNum" class="scoreNum">0</p>
+            </div>
+        </header>
+        <div id="rules" class="none">
+            <p id="ruleHead">Rules <button class="closeTag" onclick="rulesToggle()">x</button></p>
+        </div>
+        <section id="game">
+            <ul class="player1Choices bgTriangle" id="player1Choices">
+                <li id="paper" class="imageStyle paper marginPaper2" onclick="dispNone(), imageChanging(paper), gameCheck()"></li>
+                <li id="scissor" class="imageStyle scissor marginScissor2" onclick="dispNone(), imageChanging(scissor), gameCheck()"></li>
+                <li id="rock" class="imageStyle rock marginRock2" onclick="dispNone(), imageChanging(rock), gameCheck()"></li>
+                <li id="spock" class="imageStyle spock marginSpock1 none" onclick="dispNone(), imageChanging(spock), gameCheck()"></li>
+                <li id="lizard" class="imageStyle lizard marginLizard1 none" onclick="dispNone(), imageChanging(lizard), gameCheck()"></li>
+            </ul>
+            <div class="ourChoice none" id="ourchoice">
+                <p class="OurChoiceImage">Our Choice</p>
+                <div class="empty" id="imageUser"></div>
+            </div>
+            <div class="displayWin none" id="displayWin">
+                <p id="winning" class="winning"> Hello</p>
+                <button id="replay" onclick="reDisp()">Play again</button>
+            </div>
+            <div class="CompChoice none" id="CompChoice">
+                <p class="OurChoiceImage">Bot Choice</p>
+                <div id="rdmImage" class=""></div>
+            </div>
+            <div class="winningText none" id="win">You Win</div>
+            <div class="winningText none" id="lose">You Lose</div>
+            <div class="winningText none" id="matchDraw">Match Draw</div>
+            <button id="playagain" class="none" onclick="refreshPage()">Play Again</button>
+        </section>
+        <button id="rulesButton" onclick="rulesToggle()">Rules</button>
+        <script src="script.js"></script>
+    </body>
+</html>
